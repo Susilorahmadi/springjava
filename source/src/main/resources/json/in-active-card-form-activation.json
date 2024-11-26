@@ -1,0 +1,30 @@
+{
+  "isSuccess": true,
+  "payload": {
+    "header": {
+      "title": "Aktivasi Kartu Kredit",
+      "subtitle": "",
+      "desc": ""
+    },
+    "body": [
+      {
+        "key": "Kartu Kredit Anda Belum Aktif",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Dengan menekan tombol “Aktifkan sekarang”, Saya  setuju melakukan Aktivasi Kartu Kredit saya dan bertanggung jawab sepenuhnya atas Aktivasi Kartu Kredit BNI tersebut. Dengan ini saya membebaskan BNI dari segala tuntutan/gugatan dalam bentuk apapun. Untuk informasi lebih lanjut hubungi BNI Call di nomor 1500046",
+        "options": null,
+        "isMandatory": true
+      }
+    ],
+    "footer": {
+      "button": {
+        "isAllowed": true,
+        "label": "Aktifkan sekarang"
+      }
+    }
+  },
+  "responseCode": "9000",
+  "responseMessage": "Success"
+}

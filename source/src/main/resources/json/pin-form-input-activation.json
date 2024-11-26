@@ -1,0 +1,45 @@
+{
+  "isSuccess": true,
+  "payload": {
+    "header": {
+      "title": "Aktivasi Kartu Kredit",
+      "subtitle": "",
+      "desc": ""
+    },
+    "body": [
+      {
+        "key": "Masukkan PIN Kartu Kredit",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "yang telah kami kirimkan ke {phoneNo}",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "pin",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Pastikan Anda memiliki pulsa untuk menerima kode PIN Kartu Kredit",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Kirim Ulang RPIN {time}",
+        "options": null,
+        "isMandatory": true
+      }
+    ],
+    "footer": {
+      "button": {
+        "isAllowed": true,
+        "label": "Lanjutkan"
+      }
+    }
+  },
+  "responseCode": "9000",
+  "responseMessage": "Success"
+}

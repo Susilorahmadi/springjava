@@ -1,0 +1,133 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: card-binding
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: card-binding
+  template:
+    metadata:
+      labels:
+        app: card-binding
+    spec:
+      containers:
+        - name: card-binding
+          image: jtl-tkgiharbor.hq.bni.co.id/psd/card-binding:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+            requests:
+              memory: "50Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /_/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 5
+          env:
+            #------------- NO Need To Change -----------#
+            - name: MIN_IDLE
+              value: "5"
+            - name: CONNECTION_TIMEOUT
+              value: "30000"
+            - name: REDIS_HOST
+              value: "redis-service"
+            - name: REDIS_PORT
+              value: "6379"
+            - name: REDIS_PASSWORD
+              value: ""
+            #-----------------------------------------#
+            - name: EXPIRED_OTT_USED
+              value: "43200"
+            - name: DB_HOST
+              value: "192.168.143.93"
+            - name: DB_PORT
+              value: "1686"
+            - name: DB_NAME
+              value: "soasysqa"
+            - name: DB_USERNAME
+              value: "soa_app"
+            - name: DB_PASSWORD
+              value: "soaapp123"
+            - name: PREFIX
+              value: "450702"
+            - name: LIST_CHANNEL
+              value: "MAP"
+            - name: API_CALLBACK
+              value: "http://192.168.152.220:45066/cobrand/out/callback"
+            - name: PAGE_BIND_CALLBACK
+              value: "http://192.168.168.225:3001/credit-card"
+            - name: REQUEST_OTP_URL
+              value: "http://svc-otp-gateway-mapc-cobrand-binding-test.apps.delta.ocp.hq.bni.co.id/request"
+            - name: VALIDATE_OTP_URL
+              value: "http://svc-otp-gateway-mapc-cobrand-binding-test.apps.delta.ocp.hq.bni.co.id/validate"
+            - name: CHECK_BLOCK_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/checkBlockCard"
+            - name: ACTIVATE_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/activationCard"
+            - name: ENCRYPT_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/mycard/encrypt"
+            - name: DECRYPT_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/decrypt"
+            - name: VALIDATE_PIN_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/validatePinCard"
+            - name: SUMMARY_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/inquirySummaryCard"
+            - name: UNBILLED_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/inquiryUnbilled"
+            - name: BILLING_LIST_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/inquiryBillingList"
+            - name: BILLING_STATEMENT_CARD_URL
+              value: "http://apicardlink-dev.apps.dev-digi.ocp.hq.bni.co.id/cardlinksvc/billingStmt"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: card-binding
+spec:
+  selector:
+    app: card-binding
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: card-binding
+spec:
+  to:
+    kind: Service
+    name: card-binding
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: card-binding
+spec:
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 50
+          type: Utilization
+      type: Resource
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: card-binding

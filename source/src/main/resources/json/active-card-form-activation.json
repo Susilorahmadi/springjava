@@ -1,0 +1,30 @@
+{
+  "isSuccess": true,
+  "payload": {
+    "header": {
+      "title": "Aktivasi Kartu Kredit",
+      "subtitle": "",
+      "desc": ""
+    },
+    "body": [
+      {
+        "key": "Aktivasi Kartu Kredit Berhasil",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Untuk tetap dapat memberikan Anda kenyamanan lebih saat bertransaksi, lakukan Permintaan PIN disini",
+        "options": null,
+        "isMandatory": true
+      }
+    ],
+    "footer": {
+      "button": {
+        "isAllowed": true,
+        "label": "Permintaan PIN melalui SMS"
+      }
+    }
+  },
+  "responseCode": "9000",
+  "responseMessage": "Success"
+}

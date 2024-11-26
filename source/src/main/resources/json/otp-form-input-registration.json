@@ -1,0 +1,45 @@
+{
+  "isSuccess": true,
+  "payload": {
+    "header": {
+      "title": "Registrasi Kartu Kredit",
+      "subtitle": "",
+      "desc": ""
+    },
+    "body": [
+      {
+        "key": "Masukkan Kode OTP",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "yang telah kami kirimkan ke {phoneNo}",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "otp_code",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Pastikan Anda memiliki pulsa (metode SMS) atau memiliki jaringan internet (metode Whatsapp) untuk menerima kode OTP.",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Kirim Ulang Kode OTP {time}",
+        "options": null,
+        "isMandatory": true
+      }
+    ],
+    "footer": {
+      "button": {
+        "isAllowed": true,
+        "label": "Lanjutkan"
+      }
+    }
+  },
+  "responseCode": "9000",
+  "responseMessage": "Success"
+}

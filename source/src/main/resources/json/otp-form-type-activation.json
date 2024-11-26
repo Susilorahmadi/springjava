@@ -1,0 +1,39 @@
+{
+  "isSuccess": true,
+  "payload": {
+    "header": {
+      "title": "Aktivasi Kartu Kredit",
+      "subtitle": "",
+      "desc": ""
+    },
+    "body": [
+      {
+        "key": "Anda akan menerima OTP ke {phoneNo}",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Pastikan data Anda sesuai",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Jaga kerahasiaan OTP dengan tidak memberitahu kepada siapapun. Pastikan Anda memiliki pulsa (metode SMS) atau memiliki jaringan internet (metode Whatsapp) untuk menerima kode OTP.",
+        "options": null,
+        "isMandatory": true
+      }
+    ],
+    "footer": {
+      "button": {
+        "isAllowed": true,
+        "label": "Kirim melalui SMS"
+      },
+      "button": {
+        "isAllowed": true,
+        "label": "Kirim melalui Whatsapp"
+      }
+    }
+  },
+  "responseCode": "9000",
+  "responseMessage": "Success"
+}

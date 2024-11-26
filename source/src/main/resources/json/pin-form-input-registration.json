@@ -1,0 +1,35 @@
+{
+  "isSuccess": true,
+  "payload": {
+    "header": {
+      "title": "Registrasi Kartu Kredit",
+      "subtitle": "",
+      "desc": ""
+    },
+    "body": [
+      {
+        "key": "Masukkan PIN Kartu Kredit",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "pin",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "Apabila anda lupa PIN Kartu Kredit, lakukan Reset PIN dengan kirim SMS dengan format RPIN [spasi] 16 digit Nomor Kartu Tambahan [spasi] Tanggal Lahir Pemegang Kartu Utama (ddmmyyyy) dan kirim ke 3346",
+        "options": null,
+        "isMandatory": true
+      }
+    ],
+    "footer": {
+      "button": {
+        "isAllowed": true,
+        "label": "Lanjutkan"
+      }
+    }
+  },
+  "responseCode": "9000",
+  "responseMessage": "Success"
+}

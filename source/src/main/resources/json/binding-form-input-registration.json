@@ -1,0 +1,37 @@
+{
+  "isSuccess": true,
+  "payload": {
+    "header": {
+      "title": "Hubungkan Kartu Kredit",
+      "subtitle": "",
+      "desc": ""
+    },
+    "body": [
+      {
+        "key": "cardNumber",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "expiryDate",
+        "options": null,
+        "isMandatory": true
+      },
+      {
+        "key": "dob",
+        "options": "",
+        "isMandatory": true
+      }
+    ],
+    "footer": {
+      "info": {
+        "desc": [
+          "Dengan ini saya setuju melakukan koneksi Kartu Kredit BNI pada BNI Mobile Banking sesuai dengan data tersebut di atas.",
+          "Saya bertanggung jawab sepenuhnya atas koneksi Kartu Kredit BNI saya tersebut dan dengan ini saya membebaskan BNI dari segala tuntutan/gugatan dalam bentuk apapun dan siapapun"
+        ]
+      }
+    }
+  },
+  "responseCode": "9000",
+  "responseMessage": "Success"
+}

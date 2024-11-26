@@ -1,0 +1,1442 @@
+{
+	"info": {
+		"_postman_id": "a02a538e-8fcd-4846-ac6f-db31aa8905bc",
+		"name": "card-binding OCP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27637228"
+	},
+	"item": [
+		{
+			"name": "helper page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/page?form=otp-form-input-registration",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"page"
+					],
+					"query": [
+						{
+							"key": "form",
+							"value": "otp-form-input-registration"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/page?type=registration&form=otp-form-input",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"page"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "registration"
+								},
+								{
+									"key": "form",
+									"value": "otp-form-input"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "0EB72A8B92914B83990209112BF71044"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 06:13:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"header\": {\n            \"title\": \"Registrasi Kartu Kredit\",\n            \"subtitle\": \"\",\n            \"desc\": \"\"\n        },\n        \"body\": [\n            {\n                \"key\": \"Masukkan Kode OTP\",\n                \"options\": null,\n                \"isMandatory\": true\n            },\n            {\n                \"key\": \"yang telah kami kirimkan ke {phoneNo}\",\n                \"options\": null,\n                \"isMandatory\": true\n            },\n            {\n                \"key\": \"otp_code\",\n                \"options\": null,\n                \"isMandatory\": true\n            },\n            {\n                \"key\": \"Pastikan Anda memiliki pulsa (metode SMS) atau memiliki jaringan internet (metode Whatsapp) untuk menerima kode OTP.\",\n                \"options\": null,\n                \"isMandatory\": true\n            },\n            {\n                \"key\": \"Kirim Ulang Kode OTP {time}\",\n                \"options\": null,\n                \"isMandatory\": true\n            }\n        ],\n        \"footer\": {\n            \"button\": {\n                \"isAllowed\": true,\n                \"label\": \"Lanjutkan\"\n            }\n        }\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/page?type=activation&form=otp-form-input",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"page"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "activation"
+								},
+								{
+									"key": "form",
+									"value": "otp-form-input"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "0DFA744F4A8E48CFAA620D8B8D6D6A5E"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 06:22:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"header\": {\n            \"title\": \"Aktivasi Kartu Kredit\",\n            \"subtitle\": \"\",\n            \"desc\": \"\"\n        },\n        \"body\": [\n            {\n                \"key\": \"yang telah kami kirim ke {phoneNo}\",\n                \"options\": null,\n                \"isMandatory\": true\n            },\n            {\n                \"key\": \"otp_code\",\n                \"options\": null,\n                \"isMandatory\": true\n            },\n            {\n                \"key\": \"Pastikan Anda memiliki pulsa (metode SMS) atau memiliki jaringan internet (metode Whatsapp) untuk menerima kode OTP.\",\n                \"options\": null,\n                \"isMandatory\": true\n            }\n        ],\n        \"footer\": {\n            \"button\": {\n                \"isAllowed\": true,\n                \"label\": \"Lanjutkan\"\n            }\n        }\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"partnerReferenceNo\": \"2024052700000000000001\",\r\n    \"accountName\": \"Susilo\",\r\n    \"cardData\": \"\",\r\n    \"custIdMerchant\": \"45070272196319\",\r\n    \"isBindAndPay\": \"N\",\r\n    \"merchantId\": \"00007100010926 \",\r\n    \"terminalId\": \"72001126\",\r\n    \"journeyId\": \"20190329175623MTISTORE\",\r\n    \"subMerchantId\": \"310928924949487\",\r\n    \"externalStoreId\": \"000183004658\",\r\n    \"limit\": \"1000000\",\r\n    \"merchantLogoUrl\": \"https://bilba.test.com/dist/img/merchant-logo.png\",\r\n    \"phoneNo\": \"085758106165\",\r\n    \"sendOtpFlag\": \"YES\",\r\n    \"type\": \"subcribe\",\r\n    \"additionalInfo\": {\r\n        \"deviceId\": \"12345679237\",\r\n        \"channel\": \"MAP\",\r\n        \"urlCallbackSuccess\": \"https://d-jarvis.blubox.id/api/member/bni/callback-card-binding\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/registration-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"registration-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"partnerReferenceNo\": \"2020102900000000000001\",\r\n    \"accountName\": \"Putra Negara\",\r\n    \"cardData\": \"\",\r\n    \"custIdMerchant\": \"8a95f0026d2860f301\",\r\n    \"isBindAndPay\": \"N\",\r\n    \"merchantId\": \"00007100010926 \",\r\n    \"terminalId\": \"72001126\",\r\n    \"journeyId\": \"20190329175623MTISTORE\",\r\n    \"subMerchantId\": \"310928924949487\",\r\n    \"externalStoreId\": \"000183004658\",\r\n    \"limit\": \"1000000\",\r\n    \"merchantLogoUrl\": \"https://bilba.test.com/dist/img/merchant-logo.png\",\r\n    \"phoneNo\": \"085758106165\",\r\n    \"sendOtpFlag\": \"YES\",\r\n    \"type\": \"subcribe\",\r\n    \"additionalInfo\": {\r\n        \"deviceId\": \"12345679237\",\r\n        \"channel\": \"MAP\",\r\n        \"urlCallbackSuccess\": \"https://www.mapclub.com/member/page/success-binding\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/registration-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"registration-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "02483EE90553494DAA633C12A4AB6172"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 09:45:03 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"responseCode\": \"2000100\",\n        \"responseMessage\": \"Request has been processed successfully\",\n        \"referenceNo\": \"202405069074\",\n        \"partnerReferenceNo\": \"2020102900000000000001\",\n        \"bankCardToken\": null,\n        \"chargeToken\": null,\n        \"randomString\": \"XuVudeRjqJ\",\n        \"tokenExpiryTime\": \"2024-05-06T16:45:02.347568+07:00\",\n        \"additionalInfo\": {\n            \"deviceId\": \"12345679237\",\n            \"channel\": \"MAP\",\n            \"authCode\": \"8ed5b99c-6243-460b-81aa-792ead797efc\",\n            \"urlBindingPage\": \"https://www.mapclub.com/member/page/success-binding?authCode=8ed5b99c-6243-460b-81aa-792ead797efc&state=XuVudeRjqJ\"\n        }\n    },\n    \"responseCode\": \"00\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get-authcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/get-auth-code?authCode=3xh3uUrMI2VPMezJ6G3cu9Lr24NQZH&state=VPMezJ6G3c",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"get-auth-code"
+					],
+					"query": [
+						{
+							"key": "authCode",
+							"value": "3xh3uUrMI2VPMezJ6G3cu9Lr24NQZH"
+						},
+						{
+							"key": "state",
+							"value": "VPMezJ6G3c"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-authcode",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/get-auth-code?authCode=8ed5b99c-6243-460b-81aa-792ead797efc&state=XuVudeRjqJ",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"get-auth-code"
+							],
+							"query": [
+								{
+									"key": "authCode",
+									"value": "8ed5b99c-6243-460b-81aa-792ead797efc"
+								},
+								{
+									"key": "state",
+									"value": "XuVudeRjqJ"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "A9C94041EA2E48D0B74601BDE531BB76"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 09:46:03 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"partnerReferenceNo\": \"2020102900000000000001\",\n        \"accountName\": \"Putra Negara\",\n        \"cardData\": \"\",\n        \"custIdMerchant\": \"8a95f0026d2860f301\",\n        \"isBindAndPay\": \"N\",\n        \"merchantId\": \"00007100010926 \",\n        \"terminalId\": \"72001126\",\n        \"journeyId\": \"20190329175623MTISTORE\",\n        \"subMerchantId\": \"310928924949487\",\n        \"externalStoreId\": \"000183004658\",\n        \"limit\": \"1000000\",\n        \"merchantLogoUrl\": \"https://bilba.test.com/dist/img/merchant-logo.png\",\n        \"phoneNo\": \"085758106165\",\n        \"sendOtpFlag\": \"YES\",\n        \"type\": \"subcribe\",\n        \"additionalInfo\": {\n            \"deviceId\": \"12345679237\",\n            \"channel\": \"MAP\",\n            \"urlCallbackSuccess\": \"https://www.mapclub.com/member/page/success-binding\"\n        }\n    },\n    \"responseCode\": \"00\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "confirm-bind",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\": \"mFHpRHuhZQ1fcwqQ+2f+ZJefSCj4W6xNw2VSYOLi9S8=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"Clj2G3QvlmtHXXDEYkjx5lB1t4Ughp\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"2302\",\r\n        \"otpSender\": \"WHATSAPP\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/confirm-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"confirm-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "confirm-bind",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"5100550100012014\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"authCode\": \"jhAi8j2921239jpM8S\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/confirm-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"confirm-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "BB9F47D7397141BA9EC263C270D896C2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 09:41:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"data\": {\n            \"blockCode\": \"W\",\n            \"statusKartu\": \"Blok\",\n            \"cardNumber\": \"EflwxFwNAI6Jb3TE+g7z4yK6yFrOqAdpLcgcVd/WTxU=\"\n        },\n        \"message\": \"Cek Blok Sukses\",\n        \"isoResponse\": {\n            \"responseMessage\": \"Successful approval\",\n            \"responseCode\": \"00\"\n        }\n    },\n    \"responseCode\": \"00\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "activate card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\": \"kaxLqGWCVzQNarF14ycb2FklBF9U/VPskLf3mSdao5g=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"xOARRJvlP7MJSDzI15QlxaPDJN9yHN\",\r\n        \"dob\": \"1993-01-19\",\r\n        \"expiryDate\": \"2412\",\r\n        \"otpSender\": \"WHATSAPP\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/activate-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"activate-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "activate card",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"authCode\": \"1ebe8ee7-6eea-4b5a-9b1c-3033bc6e9ff6\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/activate-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"activate-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "3D399E1EAF234A7FA15411F8861F0205"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 May 2024 03:49:50 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"message\": \"Aktivasi Kartu Gagal\",\n        \"responseMessage\": \"Invalid transaction\",\n        \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\n        \"responseCode\": \"21\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "resend-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"kaxLqGWCVzQNarF14ycb2FklBF9U/VPskLf3mSdao5g=\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"WHATSAPP\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/resend-otp-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"resend-otp-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "resend-otp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAPC\",\r\n        \"authCode\": \"8ed5b99c-6243-460b-81aa-792ead797efc\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"otp_sender\": \"WHATSAPP\",\r\n        \"pin\": \"\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/resend-otp-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"resend-otp-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "239E99BC4002453AB08595577368D423"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 09:46:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"channel\": \"MAPC\",\n        \"phone_number\": \"6285758106165\",\n        \"country_code\": \"62\",\n        \"otp_sender\": \"WHATSAPP\",\n        \"product_code\": null,\n        \"otp_req_attempt\": \"1\",\n        \"error_code\": \"\",\n        \"error_message\": \"\",\n        \"status\": \"SUCCESS\"\n    },\n    \"responseCode\": \"00\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "validate-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAPC\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"c1a5b42e-fd7f-49f9-aa78-6de3657d8f93\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"839465\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/validate-otp-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"validate-otp-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "validate-otp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAPC\",\r\n        \"authCode\": \"8ed5b99c-6243-460b-81aa-792ead797efc\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"\",\r\n        \"otp_code\": \"695838\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/validate-otp-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"validate-otp-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "589B6A570D124E929F4D768F51AD5592"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 09:47:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"channel\": \"MAPC\",\n        \"phone_number\": \"6285758106165\",\n        \"country_code\": \"62\",\n        \"otp_code\": \"695838\",\n        \"product_code\": null,\n        \"otp_validate_failed_attempt\": \"0\",\n        \"error_code\": \"\",\n        \"error_message\": \"\",\n        \"status\": \"SUCCESS\"\n    },\n    \"responseCode\": \"00\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "validate PIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\": \"kaxLqGWCVzQNarF14ycb2FklBF9U/VPskLf3mSdao5g=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"xOARRJvlP7MJSDzI15QlxaPDJN9yHN\",\r\n        \"dob\": \"1993-01-19\",\r\n        \"expiryDate\": \"2412\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"6CD3A67890AB2012\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/validate-pin-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"validate-pin-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "validate PIN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNumber\": \"sjT5zwbe2ibva+WaRFYh+52EwjUPGnp85RTlP8Dt8U0=\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"authCode\": \"1ebe8ee7-6eea-4b5a-9b1c-3033bc6e9ff6\",\r\n        \"dob\": \"1993-01-19\",\r\n        \"expiryDate\": \"2407\",\r\n        \"pin\": \"CA7CB54037B76F0C\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/validate-pin-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"validate-pin-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "AFD823160CA049AA8824E461C8567DEE"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 May 2024 03:54:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"phoneNumber\": \"081541411442\",\n        \"message\": \"Validate sukses\",\n        \"responseMessage\": \"Successful approval\",\n        \"cardNumber\": \"sjT5zwbe2ibva+WaRFYh+52EwjUPGnp85RTlP8Dt8U0=\",\n        \"responseCode\": \"00\",\n        \"bankCardToken\": \"e3a138c2139849ecbe9ff83fdb9b39323d2491462fc94d2aa38f2859e75eb110\",\n        \"urlCallbackSuccess\": \"https://www.mapclub.com/member/page/success-binding?bankCardToken=e3a138c2139849ecbe9ff83fdb9b39323d2491462fc94d2aa38f2859e75eb110&changeToken=a1813b4a65e34583a1068b5c456b4601&authCode=1ebe8ee7-6eea-4b5a-9b1c-3033bc6e9ff6\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "summary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankCardToken\": \"e835b0288c344960bc813164e8b78d22adaf3727d9d140d3a3640389162aa2e6\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/summary-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"summary-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "summary",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bankCardToken\": \"b248554979cf46ddb4dc54f313df0901a100c5be941348a8b499106c2fa6ab79\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"authCode\": \"caa64528-2f90-4bf1-9fc5-058a5865c850\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"783629\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/summary-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"summary-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "85B2481EA6EC4B09ADC4EA014F6EE00C"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 May 2024 03:48:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"credentialNo\": \"5100******3495\",\n        \"creditLimit\": \"0\",\n        \"memoBalance\": \"0\",\n        \"availableCredit\": \"0\",\n        \"message\": \"Inquiry Summary Sukses\",\n        \"responseMessage\": \"Successful approval\",\n        \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\n        \"responseCode\": \"00\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				},
+				{
+					"name": "summary",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bankCardToken\": \"e3a138c2139849ecbe9ff83fdb9b39323d2491462fc94d2aa38f2859e75eb110\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"authCode\": \"caa64528-2f90-4bf1-9fc5-058a5865c850\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"783629\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/summary-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"summary-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "F6201F2D73964397ABB8359197884CA5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 May 2024 04:24:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"credentialNo\": \"4105******1300\",\n        \"creditLimit\": \"30000000\",\n        \"memoBalance\": \"-2863181\",\n        \"availableCredit\": \"32863181\",\n        \"message\": \"Inquiry Summary Sukses\",\n        \"responseMessage\": \"Successful approval\",\n        \"cardNumber\": \"sjT5zwbe2ibva+WaRFYh+52EwjUPGnp85RTlP8Dt8U0=\",\n        \"responseCode\": \"00\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "unbilled",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankCardToken\": \"55b7f77b24ae49ddb1e9fb316100872b000d5fe3eed34be3a6cd3d81fb3af9ef\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/unbilled-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"unbilled-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "unbilled",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bankCardToken\": \"4b534af200954c8c893a9d8438dafc82b8a7b8d739d6492ab30d51af840e80f0\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"authCode\": \"caa64528-2f90-4bf1-9fc5-058a5865c850\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"783629\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/unbilled-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"unbilled-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "1324A2A83F4B4DF9B6F8A9CF7879ADDA"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 04:21:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"data\": [\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"233\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-21\",\n                \"refSeq\": \"042\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010821100500120021\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23301000042\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"233\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-21\",\n                \"refSeq\": \"046\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010821100500130038\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23301000046\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"234\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-22\",\n                \"refSeq\": \"057\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010822100500120020\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23401000057\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"234\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-22\",\n                \"refSeq\": \"061\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010822100500130037\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23401000061\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"235\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-23\",\n                \"refSeq\": \"043\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010823100500120029\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23501000043\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"235\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-23\",\n                \"refSeq\": \"047\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010823100500130036\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23501000047\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"236\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-24\",\n                \"refSeq\": \"039\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010824100500120028\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23601000039\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"236\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-24\",\n                \"refSeq\": \"043\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010824100500130035\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23601000043\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"237\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-25\",\n                \"refSeq\": \"109\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"05000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010825100500120027\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23705000109\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"237\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-25\",\n                \"refSeq\": \"114\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"05000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010825100500130034\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"23705000114\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"240\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-28\",\n                \"refSeq\": \"032\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010828100500120024\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24001000032\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"240\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-28\",\n                \"refSeq\": \"036\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010828100500130031\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24001000036\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"241\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-29\",\n                \"refSeq\": \"082\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010829100500120023\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24101000082\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"241\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-29\",\n                \"refSeq\": \"087\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010829100500130030\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24101000087\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"242\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-30\",\n                \"refSeq\": \"060\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"04000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010830100500120020\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24204000060\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"242\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-30\",\n                \"refSeq\": \"064\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"04000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010830100500130037\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24204000064\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"243\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-31\",\n                \"refSeq\": \"034\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010831100500120029\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24301000034\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"243\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-08-31\",\n                \"refSeq\": \"038\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010831100500130036\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24301000038\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"244\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-09-01\",\n                \"refSeq\": \"035\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010901100500120024\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24401000035\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000021003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            },\n            {\n                \"merchState\": \"ID\",\n                \"origCurrDec\": \"00\",\n                \"reimbAtt\": \" \",\n                \"refDte\": \"244\",\n                \"ccaAmt\": \"000000000\",\n                \"description\": \"EDC TEST MSU JKT         JAKARTA      ID\",\n                \"statementDate\": \"00000000\",\n                \"posMode\": \"05\",\n                \"postingDate\": \"2017-09-01\",\n                \"refSeq\": \"039\",\n                \"type\": \"600\",\n                \"sourceCode\": \"0007\",\n                \"intlFeeInd\": \" \",\n                \"origCurrAmt\": \"000000000.00\",\n                \"orgNbr\": \"100\",\n                \"currName\": \" \",\n                \"refBatch\": \"01000\",\n                \"seqNbr\": \"00000\",\n                \"interchgRefNbr\": \"71472010901100500130031\",\n                \"dccFlag\": \" \",\n                \"xborderFee\": \"000000000\",\n                \"refNumber\": \"24401000039\",\n                \"merchCat\": \"04812\",\n                \"markupAmt\": \"000000000\",\n                \"tranAmt\": \"000022003\",\n                \"tranDate\": \"2016-12-22\",\n                \"currConv\": \"0\",\n                \"tranCode\": \"40\",\n                \"origCurrCode\": \"000\",\n                \"postingAcctNbr\": \"3563930900000689\",\n                \"cardNumber\": \"3563930900000689\"\n            }\n        ],\n        \"message\": \"Inquiry Unbilled Sukses\",\n        \"responseCode\": \"00\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "billing list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankCardToken\": \"55b7f77b24ae49ddb1e9fb316100872b000d5fe3eed34be3a6cd3d81fb3af9ef\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/billing-list-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"billing-list-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "unbilled Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bankCardToken\": \"4da5ef5836944250b5dffd096479042bbd5c99775f6845e3a0bd462c5794575a\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/billing-list-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"billing-list-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "101BB1120B2D4C0793B370650EE0B569"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 May 2024 06:54:32 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"data\": {\n            \"listBilling\": [\n                {\n                    \"statementDate\": \"2017-09-20\"\n                },\n                {\n                    \"statementDate\": \"2017-08-20\"\n                },\n                {\n                    \"statementDate\": \"2017-07-20\"\n                }\n            ],\n            \"firstDigits\": \"410504\",\n            \"lastDigits\": \"1300\",\n            \"cardNumberPosting\": \"sjT5zwbe2ibva+WaRFYh+52EwjUPGnp85RTlP8Dt8U0=\"\n        },\n        \"message\": \"List Tagihan ditemukan\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "billing statement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankCardToken\": \"7c8ece7474a44068b1dbae32d77361d9d68f24045d3b4502980e279fee4e83c7\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"2017-09-10\",\r\n        \"authCode\": \"\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ocp-dev}}/credit-card/v1.0/billing-statement-card-bind",
+					"protocol": "http",
+					"host": [
+						"{{ocp-dev}}"
+					],
+					"path": [
+						"credit-card",
+						"v1.0",
+						"billing-statement-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "billing statement",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bankCardToken\": \"0d6a7e085a1141ba824ddce4447de09713cf8b23bed2413ca670d799daea2c1c\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"2017-05-14\",\r\n        \"authCode\": \"caa64528-2f90-4bf1-9fc5-058a5865c850\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"783629\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/billing-statement-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"billing-statement-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "081A83C2D0CC433CA81E30A02BA40CA4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 04:38:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"data\": {\n            \"summary\": {\n                \"zipCode\": \"11110\",\n                \"paymentCredits\": \"00000000000\",\n                \"city\": \"JAKARTA\",\n                \"address2\": \"RT 001 RW 002\",\n                \"customerOrg\": \"100\",\n                \"address1\": \"JL LADA NO 3\",\n                \"newBalance\": \"00150049444-\",\n                \"totalAmountDue\": \"00000000000\",\n                \"statementDate\": \"2017-05-14\",\n                \"customerNumber\": \"0000000006769211\",\n                \"cashAdvance\": \"00000000000\",\n                \"previousBalance\": \"00197753146-\",\n                \"paymentDueDate\": \"2017-05-15\",\n                \"purchaseDebits\": \"00047703702\",\n                \"name\": \"TEST MASTERCARD WORLD\",\n                \"financeCharge\": \"00000000000\"\n            },\n            \"details\": [\n                {\n                    \"no\": 1,\n                    \"firstDigits\": \"510055\",\n                    \"lastDigits\": \"3495\",\n                    \"type\": \"basic\",\n                    \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\n                    \"transaction\": [\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"1047\",\n                            \"refNumber\": \"12901000124\",\n                            \"transDate\": \"2017-05-09\",\n                            \"description\": \"MBC-PEMBAYARAN TAGIHAN PLN            ID\",\n                            \"postingDate\": \"2017-05-09\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12900004001\",\n                            \"transDate\": \"2017-05-09\",\n                            \"description\": \"MBC-BIAYA BILL PLN\",\n                            \"postingDate\": \"2017-05-09\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"629734\",\n                            \"refNumber\": \"12801000078\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5226499213057    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"937105\",\n                            \"refNumber\": \"12801000082\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5310931150808    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"937105\",\n                            \"refNumber\": \"12801000084\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5310931150808    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12801000083\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12801000081\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12800012045\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5310931150808                 ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12800012037\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5310931150808                 ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12800012041\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12800012034\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12800012022\",\n                            \"transDate\": \"2017-05-08\",\n                            \"description\": \"Payment 5226499213057                 ID\",\n                            \"postingDate\": \"2017-05-08\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"664160\",\n                            \"refNumber\": \"12501000097\",\n                            \"transDate\": \"2017-05-05\",\n                            \"description\": \"Payment 5211330506391    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-05\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"841856\",\n                            \"refNumber\": \"12501000098\",\n                            \"transDate\": \"2017-05-05\",\n                            \"description\": \"Payment 5223867396298    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-05\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12500005002\",\n                            \"transDate\": \"2017-05-05\",\n                            \"description\": \"Payment 5211330506391                 ID\",\n                            \"postingDate\": \"2017-05-05\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12500005006\",\n                            \"transDate\": \"2017-05-05\",\n                            \"description\": \"Payment 5223867396298                 ID\",\n                            \"postingDate\": \"2017-05-05\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"843924\",\n                            \"refNumber\": \"12401000192\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"843924\",\n                            \"refNumber\": \"12401000193\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"843924\",\n                            \"refNumber\": \"12401000194\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"843924\",\n                            \"refNumber\": \"12401000195\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"843924\",\n                            \"refNumber\": \"12401000196\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5220795082399    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"878812\",\n                            \"refNumber\": \"12401000197\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5221352619848    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"878812\",\n                            \"refNumber\": \"12401000198\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5221352619848    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"939853\",\n                            \"refNumber\": \"12401000199\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5210022182786    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12401000190\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002023\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5220795082399                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002028\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5221352619848                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002012\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002019\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002008\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002035\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5210022182786                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002015\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5219433780017                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002032\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5221352619848                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12400002002\",\n                            \"transDate\": \"2017-05-04\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-04\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"591817\",\n                            \"refNumber\": \"12301000112\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5243783145548    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000105\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000106\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000107\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000108\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000129\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000130\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000131\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000132\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000133\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000134\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000135\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000136\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000137\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000138\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000139\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000140\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000141\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000142\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000143\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000144\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000111\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000116\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000117\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000118\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000119\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000120\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000121\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000122\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000123\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000124\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000125\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000126\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000127\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12301000128\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465    JAKARTA      ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005075\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005057\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005059\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005061\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005063\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005065\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005067\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5243783145548                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005077\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005079\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005081\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005007\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005009\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005011\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005013\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005015\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005017\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005019\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005021\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005023\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005025\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005027\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005029\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005031\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005033\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005035\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005037\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005039\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005041\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005043\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005045\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005047\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005049\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005051\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005053\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12300005055\",\n                            \"transDate\": \"2017-05-03\",\n                            \"description\": \"Payment 5239950673465                 ID\",\n                            \"postingDate\": \"2017-05-03\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12101000076\",\n                            \"transDate\": \"2017-05-01\",\n                            \"description\": \"MBC-PEMBAYARAN NON TAGLIS PLN         ID\",\n                            \"postingDate\": \"2017-05-01\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"40\",\n                            \"amount\": \"970913\",\n                            \"refNumber\": \"12101000094\",\n                            \"transDate\": \"2017-05-01\",\n                            \"description\": \"MBC-PEMBAYARAN NON TAGLIS PLN         ID\",\n                            \"postingDate\": \"2017-05-01\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"3000\",\n                            \"refNumber\": \"12100006038\",\n                            \"transDate\": \"2017-05-01\",\n                            \"description\": \"MBC-ADMIN BANK PLN\",\n                            \"postingDate\": \"2017-05-01\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"3000\",\n                            \"refNumber\": \"12100006002\",\n                            \"transDate\": \"2017-05-01\",\n                            \"description\": \"MBC-ADMIN BANK PLN\",\n                            \"postingDate\": \"2017-05-01\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12100006001\",\n                            \"transDate\": \"2017-05-01\",\n                            \"description\": \"MBC-BIAYA BILL PLN\",\n                            \"postingDate\": \"2017-05-01\",\n                            \"originalCurrency\": \"\"\n                        },\n                        {\n                            \"tran_code\": \"60\",\n                            \"amount\": \"5000\",\n                            \"refNumber\": \"12100006037\",\n                            \"transDate\": \"2017-05-01\",\n                            \"description\": \"MBC-BIAYA BILL PLN\",\n                            \"postingDate\": \"2017-05-01\",\n                            \"originalCurrency\": \"\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"message\": \"Data Tagihan ditemukan\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				},
+				{
+					"name": "billing statement",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bankCardToken\": \"0d6a7e085a1141ba824ddce4447de09713cf8b23bed2413ca670d799daea2c1c\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"2017-09-10\",\r\n        \"authCode\": \"caa64528-2f90-4bf1-9fc5-058a5865c850\",\r\n        \"dob\": \"1993-02-01\",\r\n        \"expiryDate\": \"2302\",\r\n        \"pin\": \"783629\",\r\n        \"otp_code\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/billing-statement-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"billing-statement-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "B7DAAAAA28B14D8DB8E51D34D1F067BE"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 04:38:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": {\n        \"data\": {\n            \"details\": [\n                {\n                    \"no\": 1,\n                    \"firstDigits\": \"510055\",\n                    \"lastDigits\": \"3495\",\n                    \"type\": \"basic\",\n                    \"cardNumber\": \"k35wW1qyPOOztcSn6pzNB+R4qaANOV0mZ930s5CHCrM=\",\n                    \"transaction\": []\n                }\n            ]\n        },\n        \"message\": \"Data Tagihan ditemukan\"\n    },\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UnRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankCardToken\": \"9ea55a4286cf4e6ea55a68edb08f95ca7df7e1aedbae4096900f8c418b5e8726\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/credit-card/v1.0/unbinding-card-bind",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"credit-card",
+						"v1.0",
+						"unbinding-card-bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "unResgiter",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bankCardToken\": \"9ea55a4286cf4e6ea55a68edb08f95ca7df7e1aedbae4096900f8c418b5e8726\",\r\n    \"additionalInfo\": {\r\n        \"channel\": \"MAP\",\r\n        \"statementDate\":\"\",\r\n        \"authCode\": \"\",\r\n        \"dob\": \"\",\r\n        \"expiryDate\": \"\",\r\n        \"otpSender\": \"\",\r\n        \"pin\": \"\",\r\n        \"otpCode\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/credit-card/v1.0/unbinding-card-bind",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"credit-card",
+								"v1.0",
+								"unbinding-card-bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Corr-Id",
+							"value": "1CB5B620440947519EC931B54737E64A"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Jun 2024 04:28:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"payload\": \"bankCardToken: 9ea55a4286cf4e6ea55a68edb08f95ca7df7e1aedbae4096900f8c418b5e8726\",\n    \"responseCode\": \"9000\",\n    \"responseMessage\": \"Success\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ocp-dev",
+			"value": "card-binding-psd.apps.dev-bpsoa.ocp.hq.bni.co.id",
+			"type": "string"
+		}
+	]
+}
